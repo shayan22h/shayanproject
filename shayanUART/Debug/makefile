@@ -32,10 +32,10 @@ endif
 all: shayanUART.elf
 
 # Tool invocations
-shayanUART.elf: $(OBJS) $(USER_OBJS) C:\Users\shaya\OneDrive\Desktop\Portfolio\freertos\shayanUART\LinkerScript.ld
+shayanUART.elf: $(OBJS) $(USER_OBJS) C:\Users\shaya\git\shayanproject\shayanUART\LinkerScript.ld
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU GCC Linker'
-	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\shaya\OneDrive\Desktop\Portfolio\freertos\shayanUART\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "shayanUART.elf" @"objects.list" $(USER_OBJS) $(LIBS) -lm
+	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\shaya\git\shayanproject\shayanUART\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "shayanUART.elf" @"objects.list" $(USER_OBJS) $(LIBS) -lm
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
