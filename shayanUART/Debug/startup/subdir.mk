@@ -15,7 +15,7 @@ startup/%.o: ../startup/%.s
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU GCC Assembler'
 	@echo $(PWD)
-	arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I"C:/Users/shaya/git/shayanproject/shayanUART/HAL_Driver/Inc/Legacy" -I"C:/Users/shaya/git/shayanproject/shayanUART/Utilities/STM32F4xx_Nucleo_144" -I"C:/Users/shaya/git/shayanproject/shayanUART/inc" -I"C:/Users/shaya/git/shayanproject/shayanUART/CMSIS/device" -I"C:/Users/shaya/git/shayanproject/shayanUART/CMSIS/core" -I"C:/Users/shaya/git/shayanproject/shayanUART/HAL_Driver/Inc" -g -o "$@" "$<"
+	arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -I"C:/Users/shaya/OneDrive/Desktop/shayan git/shayanproject/shayanUART/HAL_Driver/Inc/Legacy" -I"C:/Users/shaya/OneDrive/Desktop/shayan git/shayanproject/shayanUART/Utilities/STM32F4xx_Nucleo_144" -I"C:/Users/shaya/OneDrive/Desktop/shayan git/shayanproject/shayanUART/inc" -I"C:/Users/shaya/OneDrive/Desktop/shayan git/shayanproject/shayanUART/CMSIS/device" -I"C:/Users/shaya/OneDrive/Desktop/shayan git/shayanproject/shayanUART/CMSIS/core" -I"C:/Users/shaya/OneDrive/Desktop/shayan git/shayanproject/shayanUART/HAL_Driver/Inc" -g -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
