@@ -13,7 +13,7 @@
 
 /* UART handler declaration */
 UART_HandleTypeDef UartHandle;
-uint8_t mydata[13] = "Hello world\r\n";
+uint8_t mydata[13] = "Heooo world\r\n";
 
 #ifdef __GNUC__
 /* With GCC, small printf (option LD Linker->Libraries->Small printf
@@ -27,7 +27,7 @@ uint8_t mydata[13] = "Hello world\r\n";
 
 static void SystemClock_Config(void);
 static void Error_Handler(void);
-static void MX_GPIO_Init(void);
+//static void MX_GPIO_Init(void);
 
 
 int main(void)
@@ -86,32 +86,7 @@ PUTCHAR_PROTOTYPE
   return ch;
 }
 
-static void MX_GPIO_Init(void)
-{
 
-  GPIO_InitTypeDef GPIO_InitStruct;
-
-  /* GPIO Ports Clock Enable */
-  __HAL_RCC_GPIOC_CLK_ENABLE();
-  __HAL_RCC_GPIOH_CLK_ENABLE();
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9|GPIO_PIN_10, GPIO_PIN_SET);
-
-  /*Configure GPIO pins : PC8 PC9 PC10 */
-  GPIO_InitStruct.Pin = GPIO_PIN_9|GPIO_PIN_10;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
-
-  GPIO_InitStruct.Pin   = GPIO_PIN_13;
-  GPIO_InitStruct.Mode  = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull  = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FAST;
-  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
-
-}
 static void SystemClock_Config(void)
 {
   RCC_ClkInitTypeDef RCC_ClkInitStruct;
