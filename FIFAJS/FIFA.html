@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content ="width=device-width", initial-scale =1.0>
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title> FIFA </title>
+<link rel="stylesheet" href="css/fifa.css">
+<script src="js/jquery.js"></script>
+
+</head>
+
+<body>
+    <div id = "teaminput">
+        <h1> Write down how many teams for each person</h1>
+        <form method="post">
+            <input type="text" id = "noTeam1" value="no of shayan teams">
+            <input type="text" id = "noTeam2" value="no of ashkan teams">
+            <input type ="text" id = "noTeam3" value="no of reza teams">
+            <input type="text" id="TotalTeamNo" value="TotalTeamNo"/>
+            <input type ="button" id ="btTeamNo" value="confirm TeamNo">
+        </form>
+    </div>
+    <div id ="Table">
+        <br>
+         <table id="myTable">
+             <tr>
+                <td>Row1 cell1</td>
+                <td>Row1 cell2</td>
+            </tr>
+            <tr>
+                <td>Row2 cell1</td>
+                <td>Row2 cell2</td>
+            </tr>
+            <tr>
+                <td>Row3 cell1</td>
+                <td>Row3 cell2</td>
+            </tr>
+             </table>
+        <br>
+        <button type="button" onclick="createTable()">Add Team</button>
+    </div>
+    
+
+    <script type="text/javascript" src="JS/fifa.js"></script>
+
+</body>
+
+
+</html>
